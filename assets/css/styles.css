@@ -200,7 +200,7 @@ header.dark-mode {
 .element {
     animation: exampleAnimation 2s linear infinite;
     /* Menggunakan hanya @keyframes standar untuk animasi */
-    -webkit-animation: exampleAnimation 2s linear infinite; /* Hanya gunakan jika perlu untuk browser lama */
+    /* -webkit-animation: exampleAnimation 2s linear infinite; Hapus jika tidak diperlukan untuk browser lama */
 }
 
 @keyframes exampleAnimation {

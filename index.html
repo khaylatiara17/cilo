@@ -30,16 +30,23 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="parallax-bg"></div>
-        <img src="assets/images/profile.jpg" alt="Profile" class="profile-img">
+        <video autoplay muted loop class="background-video">
+            <source src="assets/videos/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-text">
+            <h1>Welcome to My Journey</h1>
+            <p>Explore, Learn, Create.</p>
+            <a href="#about" class="cta-btn">Learn More</a>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section id="about" class="about animate">
         <h2>Tentang Saya</h2>
-        <p>Nama saya **Tiara**, seorang mahasiswa teknik informatika yang antusias dalam membangun aplikasi, menyelesaikan tantangan algoritma, dan membuat solusi kreatif melalui teknologi. Fokus saya adalah memberikan dampak positif di dunia digital.</p>
-        <p>Saya percaya pada kekuatan belajar sepanjang hayat. Saat ini, saya sedang mempelajari pengembangan web full-stack menggunakan framework modern seperti **React** dan **Node.js**, serta tertarik pada desain UI/UX yang berorientasi pada pengguna.</p>
-        <p>Selain dunia teknologi, saya suka fotografi dan mendokumentasikan momen yang indah. <a href="gallery.html">Jelajahi galeri saya</a> untuk melihat lebih banyak karya saya!</p>
+        <p>Nama saya Tiara, seorang mahasiswa teknik informatika yang antusias dalam membangun aplikasi, menyelesaikan tantangan algoritma, dan membuat solusi kreatif melalui teknologi.</p>
+        <p>Saat ini, saya mempelajari pengembangan web full-stack menggunakan framework modern seperti React dan Node.js.</p>
+        <p>Selain dunia teknologi, saya suka fotografi dan mendokumentasikan momen yang indah. Jelajahi galeri saya untuk melihat lebih banyak karya saya!</p>
     </section>
 
     <!-- Call to Action -->
@@ -52,5 +59,13 @@
     <footer>
         <p>&copy; 2024 Journey Through Code - Tiara. All Rights Reserved.</p>
     </footer>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <button id="darkModeToggle" class="dark-mode-toggle">Toggle Dark Mode</button>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

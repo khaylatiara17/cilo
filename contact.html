@@ -22,16 +22,42 @@
     </header>
     <section class="contact-section">
         <h2>Hubungi Saya</h2>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <form id="contactForm">
             <label for="name">Nama:</label>
             <input type="text" id="name" name="name" required>
+            
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            
             <label for="message">Pesan:</label>
             <textarea id="message" name="message" required></textarea>
+            
             <button type="submit">Kirim Pesan</button>
         </form>
+        <div id="formMessage"></div>
     </section>
+
     <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            
+            // AJAX request to send the form data (you can replace the URL with Formspree or your server endpoint)
+            fetch('your-server-endpoint', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('formMessage').innerHTML = "<p>Pesan Anda telah terkirim! Terima kasih.</p>";
+                form.reset();
+            })
+            .catch(error => {
+                document.getElementById('formMessage').innerHTML = "<p>Terjadi kesalahan, silakan coba lagi.</p>";
+            });
+        });
+    </script>
 </body>
 </html>

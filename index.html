@@ -11,16 +11,22 @@
     </style>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" class="dark-mode-toggle">Toggle Dark Mode</button>
+
     <!-- Header -->
     <header>
         <div class="container">
             <h1 class="title">Journey Through Code</h1>
             <p class="profession">Student of Informatics Engineering</p>
-            <p class="intro">Membuka dunia baru melalui teknologi dan kreativitas. Selamat datang di perjalanan saya!</p>
+            <p class="intro">Explore, Learn, and Create with Technology.</p>
             <nav>
                 <ul>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="portfolio.html">Portofolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="gallery.html">Photos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -34,12 +40,17 @@
             <source src="assets/videos/background.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="hero-text">
-            <h1>Welcome to My Journey</h1>
-            <p>Explore, Learn, Create.</p>
-            <a href="#about" class="cta-btn">Learn More</a>
+        <div class="hero-content">
+            <h1><span class="hero-animated">Welcome to</span> My Journey</h1>
+            <p>Explore, Learn, and Create with Technology.</p>
+            <a href="#about" class="cta-btn">Start Exploring</a>
         </div>
     </section>
+
+    <!-- Lottie Animation -->
+    <div class="lottie-animation">
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_w51pcehl.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="about animate">
@@ -49,10 +60,23 @@
         <p>Selain dunia teknologi, saya suka fotografi dan mendokumentasikan momen yang indah. Jelajahi galeri saya untuk melihat lebih banyak karya saya!</p>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta">
-        <h2>Ayo Jelajahi Lebih Lanjut!</h2>
-        <p><a href="portfolio.html" class="cta-link">Lihat Portofolio Saya</a> atau <a href="contact.html" class="cta-link">Hubungi Saya</a> untuk proyek kolaborasi!</p>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What People Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-item">
+                <p>"Tiara is a highly skilled developer. Her work exceeded our expectations!"</p>
+                <p><strong>- Client A</strong></p>
+            </div>
+            <div class="testimonial-item">
+                <p>"Excellent design and attention to detail. Highly recommended."</p>
+                <p><strong>- Client B</strong></p>
+            </div>
+            <div class="testimonial-item">
+                <p>"Great collaboration! We achieved fantastic results together."</p>
+                <p><strong>- Client C</strong></p>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -60,12 +84,8 @@
         <p>&copy; 2024 Journey Through Code - Tiara. All Rights Reserved.</p>
     </footer>
 
-    <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-    </div>
-
-    <button id="darkModeToggle" class="dark-mode-toggle">Toggle Dark Mode</button>
-
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

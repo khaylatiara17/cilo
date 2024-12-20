@@ -8,16 +8,15 @@ body {
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    text-transform: uppercase;
+    margin-bottom: 20px;
     color: #333;
 }
 
 p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #666;
+    font-size: 1rem;
+    color: #555;
 }
 
 /* Header */
@@ -55,8 +54,6 @@ header nav ul li a {
     align-items: center;
     color: white;
     text-align: center;
-    background: url('assets/images/your-image.jpg') no-repeat center center fixed;
-    background-size: cover;
 }
 
 .background-video {
@@ -67,16 +64,6 @@ header nav ul li a {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    animation: parallax 10s infinite linear;
-}
-
-@keyframes parallax {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-10%);
-    }
 }
 
 .hero-content h1 {
@@ -103,12 +90,11 @@ header nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 50px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .cta-btn:hover {
-    background-color: #f39c12;
-    transform: scale(1.05);
+    background: #ff3366;
 }
 
 /* Testimonials Slider */
@@ -133,23 +119,6 @@ header nav ul li a {
     border-radius: 10px;
     margin: 0 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.slider-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.slider-nav button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 2rem;
-    padding: 10px;
-    cursor: pointer;
 }
 
 /* Scroll Progress Bar */
@@ -188,19 +157,53 @@ header.dark-mode {
     z-index: 1000;
 }
 
-@media screen and (max-width: 768px) {
-    .portfolio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* Font Awesome Animation Fixes */
+.fa-beat,
+.fa-bounce,
+.fa-beat-fade,
+.fa-fade,
+.fa-flip,
+.fa-shake,
+.fa-spin {
+    animation-delay: 0s; /* Ganti nilai animasi dengan yang valid */
+}
 
-    .testimonial-slider {
-        flex-direction: column;
-    }
+.fa-rotate-by {
+    transform: rotate(0deg); /* Pastikan transformasi dengan nilai yang benar */
+}
 
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
+/* Keyframes - Menggunakan @keyframes standar tanpa vendor prefixes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        color: #f1c40f;
+    }
+    100% {
+        color: #e74c3c;
+    }
+}
+
+/* Clip-Path untuk Mengganti clip yang sudah deprecated */
+.element {
+    clip-path: circle(50% at center); /* Ganti clip dengan clip-path yang lebih modern */
+}
+
+/* Webkit Vendor Prefixes - Menggunakan standar tanpa prefix */
+.element {
+    animation: exampleAnimation 2s linear infinite;
+    /* Menggunakan hanya @keyframes standar untuk animasi */
+    -webkit-animation: exampleAnimation 2s linear infinite; /* Hanya gunakan jika perlu untuk browser lama */
+}
+
+@keyframes exampleAnimation {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.5); }
 }
